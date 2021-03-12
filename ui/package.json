@@ -1,6 +1,6 @@
 {
   "name": "quasar-ui-quas-tom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ryan Worth <ryan.design@live.com>",
   "description": "Extension of Quasar components so that defaults can be set",
   "license": "MIT",

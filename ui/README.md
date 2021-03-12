@@ -1,9 +1,9 @@
-# Component MyComponent
+# Component QTBtn
 
 [![npm](https://img.shields.io/npm/v/quasar-ui-quas-tom.svg?label=quasar-ui-quas-tom)](https://www.npmjs.com/package/quasar-ui-quas-tom)
 [![npm](https://img.shields.io/npm/dt/quasar-ui-quas-tom.svg)](https://www.npmjs.com/package/quasar-ui-quas-tom)
 
-# Component MyComponent
+# Component QTBtn
 > Short description of the component
 
 
@@ -28,11 +28,11 @@ Vue.use(Plugin)
 
 ```html
 <script>
-import { Component as MyComponent } from 'quasar-ui-quas-tom'
+import { Component as QTBtn } from 'quasar-ui-quas-tom'
 
 export default {
   components: {
-    MyComponent
+    QTBtn
   }
 }
 </script>
@@ -51,11 +51,11 @@ Vue.use(Plugin)
 
 ```html
 <script>
-import { Component as MyComponent } from 'quasar-ui-quas-tom'
+import { Component as QTBtn } from 'quasar-ui-quas-tom'
 
 export default {
   components: {
-    MyComponent
+    QTBtn
   }
 }
 </script>

@@ -1,23 +1,23 @@
 import { version } from '../package.json'
 
-import Component from './components/Component'
+import QTBtn from './components/QTBtn'
 
 
 export {
   version,
 
-  Component
-  
+  QTBtn,
+
 }
 
 export default {
   version,
 
-  Component,
-  
+  QTBtn,
+
 
   install (Vue) {
-    Vue.component(Component.name, Component)
-    
+    Vue.component(QTBtn.name, QTBtn)
+
   }
 }

@@ -1,0 +1,46 @@
+{
+  "type": "component",
+  "meta": {
+    "docsUrl": "https://github.com/garhbod/quas-tom"
+  },
+  "quasarConfOptions": {
+    "propName": "QTBtn",
+    "definition": {
+      "round": {
+        "type": "Boolean",
+        "desc": "Makes a circle shaped button",
+        "category": "style"
+      },
+      "outline": {
+        "type": "Boolean",
+        "desc": "Use 'outline' design",
+        "category": "style"
+      },
+      "flat": {
+        "type": "Boolean",
+        "desc": "Use 'flat' design",
+        "category": "style"
+      },
+      "unelevated": {
+        "type": "Boolean",
+        "desc": "Remove shadow",
+        "category": "style"
+      },
+      "rounded": {
+        "type": "Boolean",
+        "desc": "Applies a more prominent border-radius for a squared shape button",
+        "category": "style"
+      },
+      "push": {
+        "type": "Boolean",
+        "desc": "Use 'push' design",
+        "category": "style"
+      },
+      "glossy": {
+        "type": "Boolean",
+        "desc": "Applies a glossy effect",
+        "category": "style"
+      }
+    }
+  }
+}

@@ -11,9 +11,25 @@ quasar ext add quas-tom
 ```
 Quasar CLI will retrieve it from NPM and install the extension.
 
-## Prompts
+## Usage
 
-> If your app extension uses prompts, explain them here, otherwise remove this section and remove prompts.js file.
+Replace any instance of `<q-btn>` with `<q-t-btn>`.
+Now you can control the default appearance of your btn in your quasar.conf.js
+```javascript
+// quasar.conf.js
+
+return {
+  framework: {
+    config: {
+      QuasTom: {
+        QTBtn: {
+          rounded: true,
+        }
+      },
+    }
+  }
+}
+```
 
 # Uninstall
 ```bash
@@ -25,6 +41,9 @@ quasar ext remove quas-tom
 
 # Other Info
 > Add other information that's not as important to know
+
+# Contribute
+[Github](https://github.com/garhbod/quas-tom)
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
