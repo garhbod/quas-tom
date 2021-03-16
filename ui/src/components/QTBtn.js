@@ -10,6 +10,9 @@ const propTypes = {
     'rounded',
     'push',
     'glossy',
+    'fab',
+    'fab-mini',
+    'dense',
   ],
 };
 
