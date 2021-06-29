@@ -1,4 +1,6 @@
-import Vue from 'vue'
 import VuePlugin from 'quasar-ui-quas-tom'
 
-Vue.use(VuePlugin)
+// we globally register our component with Vue
+export default ({ app }) => {
+    app.use(VuePlugin)
+}
