@@ -2,6 +2,7 @@
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = function (ctx) {
   return {
@@ -29,13 +30,9 @@ module.exports = function (ctx) {
 
     framework: {
       iconSet: 'material-icons', // Quasar icon set
-      lang: 'en-us', // Quasar language pack
-      config: {},
+      lang: 'en-US', // Quasar language pack
 
-      // Possible values for "importStrategy":
-      // * 'auto' - (DEFAULT) Auto-import needed Quasar components & directives
-      // * 'all'  - Manually specify what to import
-      importStrategy: '',
+      config: {},
 
       // Quasar plugins
       plugins: []
@@ -50,14 +47,26 @@ module.exports = function (ctx) {
 
       chainWebpack (chain) {
         chain.resolve.alias.merge({
-          'ui': path.resolve(__dirname, '../src/index.js')
+          ui: path.resolve(__dirname, `../src/index.esm.js`)
         })
+
+        chain.plugin('define-ui')
+          .use(webpack.DefinePlugin, [{
+            __UI_VERSION__: `'${require('../package.json').version}'`
+          }])
       }
     },
 
     devServer: {
       // port: 8080,
       open: true // opens browser window automatically
+    },
+
+    ssr: {
+      middlewares: [
+        ctx.prod ? 'compression' : '',
+        'render' // keep this as last one
+      ]
     }
   }
 }

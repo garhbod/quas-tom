@@ -3,6 +3,8 @@
 [![npm](https://img.shields.io/npm/v/quasar-ui-quas-tom.svg?label=quasar-ui-quas-tom)](https://www.npmjs.com/package/quasar-ui-quas-tom)
 [![npm](https://img.shields.io/npm/dt/quasar-ui-quas-tom.svg)](https://www.npmjs.com/package/quasar-ui-quas-tom)
 
+**Compatible with Quasar UI v2 and Vue 3**.
+
 # Component QTBtn
 > Short description of the component
 

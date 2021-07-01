@@ -1,11 +1,18 @@
 <template>
-  <div id="q-app">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  provide: {
+    QuasTom: {
+      QBtn: {
+        outline: true,
+        noCaps: true,
+        color: 'primary',
+      }
+    }
+  }
 }
 </script>

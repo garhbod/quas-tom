@@ -1,30 +1,25 @@
-import { QBtn } from 'quasar';
+import {inject} from 'vue';
+import {QBtn} from 'quasar';
 
 const props = {};
-const propTypes = {
-  Boolean: [
-    'round',
-    'outline',
-    'flat',
-    'unelevated',
-    'rounded',
-    'push',
-    'glossy',
-    'fab',
-    'fab-mini',
-    'dense',
-  ],
-};
 
-propTypes.Boolean.forEach((prop) => {
-  props[prop] = {
-    type: Boolean,
-    default() { return this.$q.config.QuasTom.QTBtn[prop]; },
-  };
-});
+Object.entries(QBtn.props).forEach(
+  ([prop, defaultOptions]) => {
+    const options = typeof defaultOptions === 'object' && !!defaultOptions ? defaultOptions : { type: defaultOptions };
+
+    props[prop] = {
+      ...options,
+      default() {
+        const {QBtn: QBtnProps} = inject('QuasTom', {})
+        return QBtnProps[prop] || defaultOptions.default;
+      }
+    };
+  }
+)
 
 export default {
   name: 'QTBtn',
   extends: QBtn,
   props,
+  setup: QBtn.setup,
 };

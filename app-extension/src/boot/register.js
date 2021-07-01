@@ -1,6 +1,6 @@
+import { boot } from 'quasar/wrappers'
 import VuePlugin from 'quasar-ui-quas-tom'
 
-// we globally register our component with Vue
-export default ({ app }) => {
-    app.use(VuePlugin)
-}
+export default boot(({ app }) => {
+  app.use(VuePlugin)
+})
