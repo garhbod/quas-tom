@@ -11,7 +11,8 @@ Object.entries(QBtn.props).forEach(
       ...options,
       default() {
         const {QBtn: QBtnProps} = inject('QuasTom', {})
-        return QBtnProps[prop] || defaultOptions.default;
+        return typeof QBtnProps === 'object' && !!QBtnProps
+            ? QBtnProps[prop] || defaultOptions.default : defaultOptions.default;
       }
     };
   }
